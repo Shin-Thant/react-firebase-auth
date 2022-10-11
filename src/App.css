@@ -1,0 +1,130 @@
+.app {
+	padding: 1.5rem;
+}
+
+/* auth */
+.auth {
+	--btn-active-clr: hsl(237, 86%, 65%);
+	--btn-clr: hsl(237, 86%, 60%);
+
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.auth__container {
+	width: min(450px, 85%);
+	background-color: hsl(0, 0%, 10%);
+	border-radius: 10px;
+	padding: 0.8rem;
+}
+
+/* tabs */
+.auth__tab__container {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	background-color: hsl(0, 0%, 18%);
+	border-radius: 8px;
+	margin-bottom: 1rem;
+	padding: 0.3rem;
+}
+.auth__tab {
+	width: 50%;
+	text-align: center;
+	padding: 0.6rem 0;
+	cursor: pointer;
+}
+.auth__tab:where(.auth__tab--active) {
+	background-color: hsl(0, 0%, 10%);
+	border-radius: 5px;
+}
+
+/* forms and buttons */
+.auth__container__content {
+	padding: 0.5rem;
+}
+.auth__container__heading {
+	font-weight: 600;
+	margin-bottom: 1.8rem;
+}
+
+.auth__btn {
+	display: block;
+	width: 100%;
+	background-color: var(--btn-clr);
+}
+.auth__btn:hover,
+.auth__btn:focus {
+	background-color: var(--btn-active-clr);
+}
+.auth__btn:where(:not(.form__btn)) {
+	margin-bottom: 1.2rem;
+}
+.auth__btn:where(:not(.form__btn)):last-child {
+	margin-bottom: 0;
+}
+
+.form__field {
+	margin-bottom: 1rem;
+}
+.form__field__label {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 0.95rem;
+	margin-bottom: 0.5rem;
+}
+.form__field__input {
+	background-color: transparent;
+	border: 2px solid hsl(0, 0%, 25%);
+	border-radius: 8px;
+	font-size: 1.05rem;
+	padding: 0.7rem 0.9rem;
+	color: white;
+	transition: border-color 250ms ease;
+}
+.form__field__input:focus {
+	border-color: var(--btn-active-clr);
+}
+.form__field:focus-within :where(.form__field__label) {
+	color: var(--btn-active-clr);
+}
+
+.form__btn {
+	margin-top: 2rem;
+}
+
+/* gap */
+.auth__gap {
+	width: 90%;
+	height: 1.5px;
+	background-color: hsl(0, 0%, 5%);
+	border-radius: 50px;
+	margin: 2rem auto;
+	position: relative;
+}
+.auth__gap :where(span) {
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: hsl(0, 0%, 10%);
+	padding: 0 0.4rem;
+	font-size: 0.9rem;
+	color: hsl(0, 0%, 80%);
+}
+
+/* verify page */
+.verify {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.verify__content {
+	text-align: center;
+	background-color: hsl(0, 0%, 10%);
+	padding: 1.5rem;
+	border-radius: 8px;
+}
